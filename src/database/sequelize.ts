@@ -1,11 +1,3 @@
-/*
- * @Author: Sephiroth·D·Kid
- * @Date: 2020-03-17 19:46:48
- * @LastEditors: Sephiroth·D·Kid
- * @LastEditTime: 2020-03-17 19:50:43
- * @Description: 实例化 sequelize
- */
-
 import { Sequelize } from 'sequelize-typescript';
 import db from '../../config/db';
 

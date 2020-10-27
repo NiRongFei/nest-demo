@@ -5,6 +5,7 @@ import { UserService } from './user.service';
 import { ValidationPipe } from '../../pipe/validation.pipe';
 import { LoginDTO, RegisterInfoDTO } from './user.dto';
 import { ApiTags, ApiBearerAuth, ApiBody } from '@nestjs/swagger';
+
 @ApiBearerAuth()
 @ApiTags('user')
 @Controller('user')
