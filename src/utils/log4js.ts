@@ -1,11 +1,3 @@
-/*
- * @Author: Sephiroth·D·Kid
- * @Date: 2020-03-20 15:33:20
- * @LastEditors: Sephiroth·D·Kid
- * @LastEditTime: 2020-03-20 15:37:28
- * @Description: Log4js 工具函数 & 实例化
- */
-
 import * as Path from 'path';
 import * as Log4js from 'log4js';
 import * as Util from 'util';

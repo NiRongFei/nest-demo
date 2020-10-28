@@ -15,14 +15,14 @@ async function bootstrap() {
   app.use(logger);
   // 使用拦截器打印出参
   app.useGlobalInterceptors(new TransformInterceptor());
-  // app.setGlobalPrefix('nest-zero-to-one');
+  app.setGlobalPrefix('nestjs');
   app.useGlobalFilters(new AllExceptionsFilter());
   app.useGlobalFilters(new HttpExceptionFilter());
   // 配置 Swagger
   const options = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('Nest zero to one')
-    .setDescription('The nest-zero-to-one API description')
+    .setTitle('Nestjs')
+    .setDescription('The nestjs API description')
     .setVersion('1.0')
     .addTag('test')
     .build();

@@ -1,11 +1,3 @@
-/*
- * @Author: Sephiroth·D·Kid
- * @Date: 2020-03-19 16:26:28
- * @LastEditors: Sephiroth·D·Kid
- * @LastEditTime: 2020-03-20 11:47:29
- * @Description: JWT 策略
- */
-
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable } from '@nestjs/common';

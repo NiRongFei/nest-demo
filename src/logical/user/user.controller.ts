@@ -10,7 +10,7 @@ import { ApiTags, ApiBearerAuth, ApiBody } from '@nestjs/swagger';
 @ApiTags('user')
 @Controller('user')
 export class UserController {
-  constructor(private readonly authService: AuthService, private readonly usersService: UserService) {}
+  constructor(private readonly authService: AuthService, private readonly userService: UserService) {}
 
   // JWT验证 - Step 1: 用户请求登录
   @Post('login')
@@ -41,6 +41,6 @@ export class UserController {
   @UsePipes(new ValidationPipe())
   @Post('register')
   async register(@Body() body: RegisterInfoDTO) {
-    return await this.usersService.register(body);
+    return await this.userService.register(body);
   }
 }

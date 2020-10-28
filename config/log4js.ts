@@ -1,11 +1,3 @@
-/*
- * @Author: Sephiroth·D·Kid
- * @Date: 2020-03-17 16:47:04
- * @LastEditors: Sephiroth·D·Kid
- * @LastEditTime: 2020-03-20 16:04:00
- * @Description: log4js的配置文件
- */
-
 import * as path from 'path';
 const baseLogPath = path.resolve(__dirname, '../../logs');
 

@@ -1,14 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
+import { UserService } from '../user/user.service';
 import { encryptPassword } from '../../utils/cryptogram';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    private readonly usersService: UserService,
-    private readonly jwtService: JwtService,
-  ) {}
+  constructor(private readonly usersService: UserService, private readonly jwtService: JwtService) {}
 
   // JWT验证 - Step 2: 校验用户信息
   async validateUser(username: string, password: string): Promise<any> {

@@ -1,11 +1,3 @@
-/*
- * @Author: Sephiroth·D·Kid
- * @Date: 2020-03-19 14:13:25
- * @LastEditors: Sephiroth·D·Kid
- * @LastEditTime: 2020-03-19 14:30:57
- * @Description: 工具函数：加密 & 解密
- */
-
 import * as crypto from 'crypto';
 
 /**
