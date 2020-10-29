@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from '../user/user.service';
+import { RedisInstance } from '../../database/redis';
 import { encryptPassword } from '../../utils/cryptogram';
 
 @Injectable()
@@ -47,6 +48,8 @@ export class AuthService {
     // console.log('JWT验证 - Step 3: 处理 jwt 签证', `payload: ${JSON.stringify(payload)}`);
     try {
       const token = this.jwtService.sign(payload);
+      const redis = await RedisInstance.initRedis('auth.certificate', 0);
+      await redis.setex(`${user.id}-${user.username}`, 300, `${token}`);
       return {
         code: 200,
         data: {

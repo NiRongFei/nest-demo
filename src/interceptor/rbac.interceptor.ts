@@ -9,7 +9,7 @@ export class RbacInterceptor implements NestInterceptor {
     const req = context.getArgByIndex(1).req;
     // console.log('req.user:', req);
     if (req.user.role > this.role) {
-      throw new ForbiddenException('对不起，您无权操作');
+      throw new ForbiddenException('对不起，您无权操作！');
     }
     return next.handle();
   }
